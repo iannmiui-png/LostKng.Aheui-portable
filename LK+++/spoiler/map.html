@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>JonRipley.com — Archive</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:#f4f4ef;color:#333;font:15px/1.6 Georgia,'Times New Roman',serif;
+     min-height:100vh;display:flex;align-items:center;justify-content:center;padding:24px}
+.card{max-width:520px;text-align:center;background:#fff;border:1px solid #ddd;
+      padding:44px 40px;box-shadow:0 1px 4px rgba(0,0,0,.06)}
+h1{font-size:26px;color:#2a2a2a;margin-bottom:6px;font-weight:normal}
+.sub{color:#999;font-size:13px;font-family:monospace;margin-bottom:22px}
+p{color:#555;margin-bottom:14px}
+a{color:#356;text-decoration:none;border-bottom:1px dotted #9ab}
+.foot{margin-top:26px;font-size:12px;color:#aaa}
+</style>
+</head>
+<body>
+<div class="card">
+  <h1>The Lost Kingdom — Archive</h1>
+  <div class="sub">status: archived &middot; content preserved</div>
+  <p>This page is part of an archived collection and may be
+     deprecated or obsolete. It is presented in the hope that it
+     may still be useful.</p>
+  <p>The interactive fiction and related tools have been retired,
+     but the material remains available for reference.</p>
+  <div class="foot">&copy; JonRipley.com &middot; archived edition</div>
+</div>
+<script>
+/* ─────────────────────────────────────────────────────────────────────────
+   Nothing to see on the page. Open the developer console (F12) — the full
+   reverse-engineered source map of LostKng.b prints itself there.
+   ───────────────────────────────────────────────────────────────────────── */
+(function(){
+  const REGIONS = [{"id": 0, "name": "Init + Title Screen", "raw_start": 314, "raw_end": 25797, "bf_ops": 25134, "sections": 6, "description": "Game initialization, title string constants, and opening text.", "sub_regions": [{"name": "Cell init", "raw_start": 0, "raw_end": 313, "sections": 0, "dots": 0, "description": "Clear cell 0, set cells 0+1 = 1, build constants"}], "notable": []}, {"id": 1, "name": "Y/N Long Descriptions", "raw_start": 25797, "raw_end": 34243, "bf_ops": 8331, "sections": 13, "description": "Prompts for verbose room descriptions (Y/N).", "sub_regions": [], "notable": []}, {"id": 2, "name": "Room Display + Look/Inv/Help", "raw_start": 34243, "raw_end": 496416, "bf_ops": 455841, "sections": 823, "description": "Largest region. Room descriptions, inventory display, verb dispatch setup.", "sub_regions": [{"name": "Verb dispatch setup", "raw_start": 34243, "raw_end": 45000, "sections": 22, "dots": 1, "description": "Parse input char, set up branch flags"}, {"name": "Short room descriptions", "raw_start": 45000, "raw_end": 156000, "sections": 304, "dots": 2351, "description": "20 rooms × (short description + exits)"}, {"name": "Long room descriptions", "raw_start": 156000, "raw_end": 282000, "sections": 211, "dots": 5826, "description": "20 rooms × full narrative text"}, {"name": "Inventory/look display", "raw_start": 282000, "raw_end": 375000, "sections": 128, "dots": 206, "description": "\"You can see:\" / \"You are carrying:\""}, {"name": "Floor item descriptions", "raw_start": 375000, "raw_end": 416000, "sections": 55, "dots": 523, "description": "10 items × location descriptions"}, {"name": "Carried item display", "raw_start": 416000, "raw_end": 496416, "sections": 103, "dots": 250, "description": "Item names with states (lit, full, etc.)"}], "notable": [{"category": "Room", "label": "Hut (short)", "raw_pos": 45871, "detail": "Short description"}, {"category": "Room", "label": "Dirt Path North (short)", "raw_pos": 49036, "detail": "Short description"}, {"category": "Room", "label": "High Plateau (short)", "raw_pos": 52212, "detail": "Short description"}, {"category": "Room", "label": "Dirt Path South (short)", "raw_pos": 55900, "detail": "Short description"}, {"category": "Room", "label": "Forest rooms (short)", "raw_pos": 59152, "detail": "4 rooms 59152..69948"}, {"category": "Room", "label": "Forest Clearing (short)", "raw_pos": 72519, "detail": "Short description"}, {"category": "Room", "label": "Dirt Patch/Yard (short)", "raw_pos": 76045, "detail": "Short description"}, {"category": "Room", "label": "Stagnant Pond (short)", "raw_pos": 79499, "detail": "Short description"}, {"category": "Room", "label": "Cave Mouth (short)", "raw_pos": 82980, "detail": "Short description"}, {"category": "Room", "label": "Low Passage (short)", "raw_pos": 89409, "detail": "Short description"}, {"category": "Room", "label": "Large Cavern (short)", "raw_pos": 92979, "detail": "Short description"}, {"category": "Room", "label": "Catacombs (short)", "raw_pos": 99290, "detail": "8 rooms 99290..127725"}, {"category": "Room", "label": "Wall of Flame (short)", "raw_pos": 130812, "detail": "Short description"}, {"category": "Room", "label": "Junction (short)", "raw_pos": 141873, "detail": "Short description"}, {"category": "Room", "label": "Church Altar (short)", "raw_pos": 145987, "detail": "Short description"}, {"category": "Room", "label": "Cave of Gold (short)", "raw_pos": 149981, "detail": "Short description"}, {"category": "Room", "label": "Dark Cave (short)", "raw_pos": 155640, "detail": "Short description"}, {"category": "Room", "label": "Hut (long)", "raw_pos": 158898, "detail": "Long description"}, {"category": "Room", "label": "Dirt Path North (long)", "raw_pos": 163530, "detail": "Long description"}, {"category": "Room", "label": "High Plateau (long)", "raw_pos": 167610, "detail": "Long description"}, {"category": "Room", "label": "Dirt Path South (long)", "raw_pos": 178046, "detail": "Long description"}, {"category": "Room", "label": "Forest rooms (long)", "raw_pos": 181957, "detail": "4 rooms 181957..190913"}, {"category": "Room", "label": "Forest Clearing (long)", "raw_pos": 193913, "detail": "Long description"}, {"category": "Room", "label": "Dirt Patch/Yard (long)", "raw_pos": 197463, "detail": "Long description"}, {"category": "Room", "label": "Stagnant Pond (long)", "raw_pos": 201124, "detail": "Long description"}, {"category": "Room", "label": "Cave Mouth (long)", "raw_pos": 204892, "detail": "Long description"}, {"category": "Room", "label": "Low Passage (long)", "raw_pos": 211550, "detail": "Long description"}, {"category": "Room", "label": "Large Cavern (long)", "raw_pos": 215027, "detail": "Long description"}, {"category": "Room", "label": "Catacombs (long)", "raw_pos": 222813, "detail": "8 rooms 222813..245270"}, {"category": "Room", "label": "Wall of Flame (long)", "raw_pos": 253089, "detail": "Long description"}, {"category": "Room", "label": "Junction (long)", "raw_pos": 266108, "detail": "Long description"}, {"category": "Room", "label": "Church Altar (long)", "raw_pos": 269828, "detail": "Long description"}, {"category": "Room", "label": "Cave of Gold (long)", "raw_pos": 273440, "detail": "Long description"}, {"category": "Room", "label": "Dark Cave (long)", "raw_pos": 279672, "detail": "Long description"}, {"category": "Item", "label": "Lamp (floor)", "raw_pos": 377929, "detail": "rusty old lamp"}, {"category": "Item", "label": "Matches (floor)", "raw_pos": 381483, "detail": "box of matches"}, {"category": "Item", "label": "Dynamite (floor)", "raw_pos": 385055, "detail": "stick of dynamite"}, {"category": "Item", "label": "Axe (floor)", "raw_pos": 388713, "detail": "wooden-handled axe"}, {"category": "Item", "label": "Herring (floor)", "raw_pos": 392341, "detail": "dead fish / red herring"}, {"category": "Item", "label": "Sceptre (floor)", "raw_pos": 395937, "detail": "golden sceptre"}, {"category": "Item", "label": "Crown (floor)", "raw_pos": 399527, "detail": "stolen crown"}, {"category": "Item", "label": "Ring (floor)", "raw_pos": 403191, "detail": "signet ring"}, {"category": "Item", "label": "Scroll (floor)", "raw_pos": 406803, "detail": "parchment scroll"}, {"category": "Item", "label": "Urn (floor)", "raw_pos": 411231, "detail": "wine urn"}]}, {"id": 3, "name": "Command Argument Input", "raw_start": 496416, "raw_end": 501564, "bf_ops": 5078, "sections": 8, "description": "Reads the argument digit for Take/Drop/etc. commands.", "sub_regions": [], "notable": []}, {"id": 4, "name": "Movement + Deaths + Help", "raw_start": 501564, "raw_end": 686477, "bf_ops": 182380, "sections": 154, "description": "Movement between rooms, death scenarios, and help/info pages.", "sub_regions": [], "notable": [{"category": "Death", "label": "Wildcat eats you", "raw_pos": 513312, "detail": "Enter cavern without food"}, {"category": "Death", "label": "Village won't help", "raw_pos": 517429, "detail": "Go south from junction"}, {"category": "Block", "label": "Door impassable", "raw_pos": 521022, "detail": "Hut door"}, {"category": "Block", "label": "Rock fall impassable", "raw_pos": 524867, "detail": "Plateau cave before dynamite"}, {"category": "Death", "label": "Fallen off plateau", "raw_pos": 543641, "detail": "Wrong direction from plateau"}, {"category": "Death", "label": "Pit in dark", "raw_pos": 553729, "detail": "Navigate caves without lamp"}, {"category": "Death", "label": "Mage kills you", "raw_pos": 558838, "detail": "Enter sanctum without axe"}, {"category": "Help", "label": "Help text", "raw_pos": 565055, "detail": "411 dots"}, {"category": "Help", "label": "Further information", "raw_pos": 572442, "detail": "935 dots"}, {"category": "Help", "label": "Command list", "raw_pos": 582739, "detail": "1001 dots"}, {"category": "Help", "label": "Parser info", "raw_pos": 592646, "detail": "888 dots"}, {"category": "Help", "label": "Object manipulation", "raw_pos": 602416, "detail": "581 dots"}, {"category": "Help", "label": "Classic game nature", "raw_pos": 610569, "detail": "808 dots"}, {"category": "Help", "label": "Review request", "raw_pos": 620558, "detail": "192 dots"}, {"category": "Help", "label": "Contact info", "raw_pos": 625896, "detail": "216 dots"}, {"category": "Help", "label": "Credits", "raw_pos": 631625, "detail": "389 dots"}, {"category": "Help", "label": "Backstory menu", "raw_pos": 649633, "detail": "266 dots"}, {"category": "Help", "label": "Chapter I-VI", "raw_pos": 656084, "detail": "~6700 dots total (to 719396)"}]}, {"id": 5, "name": "Item/Combat/Puzzle Actions", "raw_start": 686477, "raw_end": 1275890, "bf_ops": 581339, "sections": 607, "description": "All item interactions, combat, puzzles, and scoring.", "sub_regions": [], "notable": [{"category": "Score", "label": "Score display", "raw_pos": 739749, "detail": "\"You scored X points...\""}, {"category": "Score", "label": "Compass found (+5)", "raw_pos": 745748, "detail": ""}, {"category": "Score", "label": "Fill urn (+5)", "raw_pos": 748648, "detail": ""}, {"category": "Score", "label": "Fill lamp (+10)", "raw_pos": 751532, "detail": ""}, {"category": "Score", "label": "Light lamp (+5)", "raw_pos": 754404, "detail": ""}, {"category": "Score", "label": "Unblock cave (+5)", "raw_pos": 757580, "detail": ""}, {"category": "Score", "label": "Calm beast (+20)", "raw_pos": 760439, "detail": "Hurl herring"}, {"category": "Score", "label": "Extinguish fire (+15)", "raw_pos": 763348, "detail": ""}, {"category": "Score", "label": "Respect gods (+15)", "raw_pos": 766266, "detail": "Pray"}, {"category": "Score", "label": "Kill mage (+24)", "raw_pos": 769130, "detail": ""}, {"category": "Score", "label": "Seek approval (+1)", "raw_pos": 771945, "detail": "Mutually exclusive with pray"}, {"category": "Death", "label": "Match ignites pool", "raw_pos": 792055, "detail": "Burn at clearing"}, {"category": "Action", "label": "Light lamp (no fuel)", "raw_pos": 807676, "detail": ""}, {"category": "Action", "label": "Light lamp (lit)", "raw_pos": 810599, "detail": ""}, {"category": "Action", "label": "Light lamp (success)", "raw_pos": 813513, "detail": "+5 pts"}, {"category": "Action", "label": "Dynamite clears rubble", "raw_pos": 848361, "detail": "+5 pts"}, {"category": "Action", "label": "Dynamite wind blows out", "raw_pos": 855939, "detail": ""}, {"category": "Action", "label": "Match watch burn", "raw_pos": 873873, "detail": ""}, {"category": "Action", "label": "Burn: bad idea", "raw_pos": 886226, "detail": ""}, {"category": "Action", "label": "Burn scroll (destroy ID)", "raw_pos": 893593, "detail": ""}, {"category": "Death", "label": "Drink pond water", "raw_pos": 934449, "detail": "Poison"}, {"category": "Death", "label": "Drink crude oil", "raw_pos": 947858, "detail": "Poison"}, {"category": "Death", "label": "Drink burning oil", "raw_pos": 956145, "detail": ""}, {"category": "Death", "label": "Drink rotten fish", "raw_pos": 967580, "detail": "Poison"}, {"category": "Action", "label": "Hurl urn at fire", "raw_pos": 1001145, "detail": "+15 pts"}, {"category": "Action", "label": "Hurl herring in dark", "raw_pos": 1009934, "detail": "+20 pts"}, {"category": "Death", "label": "Lamp ignites pool", "raw_pos": 1062393, "detail": "Drop lamp at pool"}, {"category": "Death", "label": "Drop herring near wildcat", "raw_pos": 1106085, "detail": ""}, {"category": "Action", "label": "Fill lamp", "raw_pos": 1134970, "detail": "+10 pts"}, {"category": "Action", "label": "Fill urn", "raw_pos": 1160916, "detail": "+5 pts"}, {"category": "Action", "label": "Kill mage", "raw_pos": 1190600, "detail": "+24 pts"}, {"category": "Action", "label": "Pray: gods pleased", "raw_pos": 1230306, "detail": "+15 pts"}, {"category": "Action", "label": "Pray: powerful force", "raw_pos": 1234311, "detail": "+1 pt"}, {"category": "Action", "label": "Pray: no help here", "raw_pos": 1254969, "detail": ""}]}, {"id": 6, "name": "Quit Confirmation", "raw_start": 1275890, "raw_end": 1291268, "bf_ops": 15167, "sections": 12, "description": "Handles quit command confirmation (Y/N).", "sub_regions": [], "notable": []}, {"id": 7, "name": "Save/Restore + Score + Read/Take", "raw_start": 1291268, "raw_end": 2113325, "bf_ops": 810796, "sections": 311, "description": "Save/restore game state, read/take items, score reporting, win condition.", "sub_regions": [{"name": "Read item text", "raw_start": 1320270, "raw_end": 1376410, "sections": 20, "dots": 500, "description": "Text for reading matches, compass, dynamite, ring, scroll, urn"}, {"name": "Take/inventory", "raw_start": 1376410, "raw_end": 1497452, "sections": 30, "dots": 300, "description": "Take item handling, 'already holding', 'too many items', inventory names"}, {"name": "RESTORE game", "raw_start": 1497452, "raw_end": 1763876, "sections": 626, "dots": 0, "description": "Deserialize ~300 cells of game state from save format"}, {"name": "STORE game", "raw_start": 1772630, "raw_end": 1985130, "sections": 634, "dots": 0, "description": "Serialize ~300 cells of game state to save format"}], "notable": [{"category": "Read", "label": "Read matches", "raw_pos": 1320270, "detail": ""}, {"category": "Read", "label": "Read compass", "raw_pos": 1326980, "detail": ""}, {"category": "Read", "label": "Read dynamite", "raw_pos": 1330442, "detail": ""}, {"category": "Read", "label": "Read ring", "raw_pos": 1340980, "detail": ""}, {"category": "Read", "label": "Read scroll", "raw_pos": 1346808, "detail": ""}, {"category": "Read", "label": "Read urn", "raw_pos": 1352656, "detail": ""}, {"category": "Error", "label": "Already holding", "raw_pos": 1376410, "detail": ""}, {"category": "Error", "label": "Too many items", "raw_pos": 1384068, "detail": ""}, {"category": "Action", "label": "Inventory item names", "raw_pos": 1425494, "detail": ""}, {"category": "Win", "label": "Reclaimed birthright", "raw_pos": 1994430, "detail": ""}, {"category": "Error", "label": "Didn't understand", "raw_pos": 2000535, "detail": ""}, {"category": "Error", "label": "Can't go that way", "raw_pos": 2004838, "detail": ""}, {"category": "Error", "label": "Specify item", "raw_pos": 2012422, "detail": ""}, {"category": "Error", "label": "No such item", "raw_pos": 2016452, "detail": ""}, {"category": "Score", "label": "Score notification", "raw_pos": 2021994, "detail": ""}]}, {"id": 8, "name": "Another Game? + End-of-Turn", "raw_start": 2113325, "raw_end": 2133142, "bf_ops": 19546, "sections": 12, "description": "Death header, score summary, rank display, play again prompt.", "sub_regions": [], "notable": [{"category": "UI", "label": "Death header", "raw_pos": 2030743, "detail": ""}, {"category": "UI", "label": "Score summary + rank", "raw_pos": 2047086, "detail": ""}, {"category": "Rank", "label": "Adventurer (0-14)", "raw_pos": 2061933, "detail": ""}, {"category": "Rank", "label": "Experienced (15-29)", "raw_pos": 2067727, "detail": ""}, {"category": "Rank", "label": "Seasoned (30-44)", "raw_pos": 2073605, "detail": ""}, {"category": "Rank", "label": "Junior Master (45-59)", "raw_pos": 2079503, "detail": ""}, {"category": "Rank", "label": "Master 2nd Class (60-74)", "raw_pos": 2085389, "detail": ""}, {"category": "Rank", "label": "Master 1st Class (75-89)", "raw_pos": 2091334, "detail": ""}, {"category": "Rank", "label": "Grandmaster (90-100)", "raw_pos": 2097194, "detail": ""}, {"category": "UI", "label": "Another game? (Y/N)", "raw_pos": 2113109, "detail": ""}]}, {"id": 9, "name": "Easter Egg + Final Loop", "raw_start": 2133142, "raw_end": 2159824, "bf_ops": 26316, "sections": 22, "description": "Easter egg message, solution records, 'Thanks for playing.'", "sub_regions": [], "notable": [{"category": "Easter", "label": "Easter egg message", "raw_pos": 2144469, "detail": ""}, {"category": "Easter", "label": "Shortest solution (84 moves)", "raw_pos": 2146496, "detail": "Daniel B Cristofani"}, {"category": "Easter", "label": "Author's solution record", "raw_pos": 2152632, "detail": ""}, {"category": "UI", "label": "Thanks for playing", "raw_pos": 2159560, "detail": ""}]}];
+  const TOTAL = 2129928;
+
+  const REG_COLORS = ['#e07a5f','#81b29a','#c99a2f','#5b8ac0','#a05fb0',
+                      '#c07a2f','#3f9a8a','#8a5fc0','#7a9a2f','#c04f7a'];
+  const CAT_COLORS = {
+    Room:'#3f8a5a', Item:'#b8860b', Death:'#c0392b', Block:'#a05050', Help:'#2f6aa0',
+    Score:'#2f9a4a', Action:'#8a4a9a', Read:'#2f8aa0', Error:'#b05a20', Win:'#c8a000',
+    UI:'#606080', Rank:'#907030', Easter:'#c04f8a'
+  };
+
+  const H  = 'font:bold 15px sans-serif;color:#e6d9a8;background:#1c1c20;padding:3px 8px;border-radius:3px';
+  const SUB= 'font:11px monospace;color:#888';
+  const DIM= 'color:#888';
+
+  console.log('%c Lost Kingdom · Brainfuck Source Map ',
+    'font:bold 16px sans-serif;color:#0d0e12;background:linear-gradient(90deg,#e6d9a8,#8fd0ff);padding:6px 14px;border-radius:4px');
+  console.log('%c'+TOTAL.toLocaleString()+' instructions · '+REGIONS.length+' regions · '+
+    REGIONS.reduce((a,r)=>a+r.notable.length,0)+' notable locations','font:12px monospace;color:#666');
+  console.log('%cReverse-engineered structure of LostKng.b. Expand the groups below.','color:#888;font-style:italic');
+  console.log(' ');
+
+  function pct(n){return (100*n/TOTAL).toFixed(1)+'%';}
+
+  REGIONS.forEach((r,i)=>{
+    const col = REG_COLORS[i%REG_COLORS.length];
+    console.groupCollapsed(
+      '%c '+r.id+' %c '+r.name+'  %c'+r.raw_start.toLocaleString()+'–'+r.raw_end.toLocaleString()+
+      '  %c('+r.bf_ops.toLocaleString()+' ops · '+pct(r.bf_ops)+')',
+      'background:'+col+';color:#000;font-weight:bold;border-radius:2px;padding:1px 5px',
+      'font-weight:bold;color:'+col,
+      'color:#7fc4ff;font-family:monospace;font-size:11px',
+      'color:#888;font-size:11px');
+    console.log('%c'+r.description, 'color:#bbb');
+
+    if(r.sub_regions && r.sub_regions.length){
+      console.groupCollapsed('%csub-regions ('+r.sub_regions.length+')','color:#888;font-weight:bold');
+      console.table(r.sub_regions.map(s=>({
+        name:s.name,
+        range:s.raw_start.toLocaleString()+'–'+s.raw_end.toLocaleString(),
+        sections:s.sections, dots:s.dots, description:s.description
+      })));
+      console.groupEnd();
+    }
+
+    if(r.notable && r.notable.length){
+      console.groupCollapsed('%cnotable locations ('+r.notable.length+')','color:#888;font-weight:bold');
+      r.notable.forEach(n=>{
+        const c = CAT_COLORS[n.category]||'#888';
+        console.log(
+          '%c '+n.category+' %c '+n.label+' %c@'+n.raw_pos.toLocaleString()+
+          (n.detail?' %c— '+n.detail:'%c'),
+          'background:'+c+';color:#fff;border-radius:2px;padding:0 5px;font-size:11px',
+          'color:#e0e0e0',
+          'color:#7fc4ff;font-family:monospace;font-size:11px',
+          'color:#999;font-style:italic;font-size:11px');
+      });
+      console.groupEnd();
+    }
+    console.groupEnd();
+  });
+
+  // ── console API for querying, exposed globally ──────────────────────────
+  const flat = [];
+  REGIONS.forEach(r=>r.notable.forEach(n=>flat.push({...n, region:r.name, region_id:r.id})));
+
+  const LK = {
+    regions(){ console.table(REGIONS.map(r=>({
+      id:r.id, name:r.name, start:r.raw_start, end:r.raw_end,
+      ops:r.bf_ops, sections:r.sections,
+      subs:r.sub_regions.length, notable:r.notable.length}))); return REGIONS.length+' regions'; },
+    region(id){ const r=REGIONS.find(x=>x.id===id); if(!r)return 'no region '+id;
+      console.log('%c'+r.name,'font:bold 14px sans-serif;color:#e6d9a8');
+      console.log(r.description);
+      if(r.sub_regions.length) console.table(r.sub_regions);
+      if(r.notable.length) console.table(r.notable);
+      return r; },
+    search(q){ q=(q||'').toLowerCase();
+      const hits=flat.filter(n=>(n.label||'').toLowerCase().includes(q)||
+        (n.detail||'').toLowerCase().includes(q)||(n.category||'').toLowerCase().includes(q)||
+        (n.region||'').toLowerCase().includes(q));
+      console.table(hits.map(n=>({category:n.category,label:n.label,pos:n.raw_pos,region:n.region,detail:n.detail})));
+      return hits.length+' match'+(hits.length===1?'':'es'); },
+    category(cat){ return this.search(cat); },
+    scores(){ const s=flat.filter(n=>/\+\d+/.test(n.label)||/\+\d+/.test(n.detail));
+      console.table(s.map(n=>({action:n.label,detail:n.detail,pos:n.raw_pos}))); return s.length+' scoring actions'; },
+    deaths(){ return this.category('Death'); },
+    rooms(){ return this.category('Room'); },
+    items(){ return this.category('Item'); },
+    at(pos){ // nearest notable to a raw position
+      let best=null,bd=1e18; flat.forEach(n=>{const d=Math.abs(n.raw_pos-pos);if(d<bd){bd=d;best=n;}});
+      const reg=REGIONS.find(r=>pos>=r.raw_start&&pos<r.raw_end);
+      console.log('position',pos.toLocaleString(),'is in region:', reg?reg.name:'(none)');
+      console.log('nearest notable:', best?best.label+' @'+best.raw_pos.toLocaleString()+' ('+bd+' away)':'(none)');
+      return best; },
+    help(){ console.log('%cLK console API','font:bold 13px sans-serif;color:#8fd0ff');
+      [['LK.regions()','list all regions as a table'],
+       ['LK.region(id)','detail one region (0–9)'],
+       ['LK.search("mage")','search all locations'],
+       ['LK.scores()','all scoring actions'],
+       ['LK.deaths() / .rooms() / .items()','filter by category'],
+       ['LK.at(pos)','what lives near a raw BF position'],
+       ['LK.data','the raw region array']
+      ].forEach(([c,d])=>console.log('%c'+c+'%c  — '+d,'color:#8fd0ff;font-family:monospace','color:#999'));
+      return; },
+    data: REGIONS
+  };
+  window.LK = LK;
+
+  console.log(' ');
+  console.log('%c▸ query it: %cLK.help()%c  ·  LK.search("herring")  ·  LK.region(5)  ·  LK.scores()',
+    'color:#8fe08f;font-weight:bold','color:#8fd0ff;font-family:monospace','color:#888');
+})();
+</script>
+</body>
+</html>
